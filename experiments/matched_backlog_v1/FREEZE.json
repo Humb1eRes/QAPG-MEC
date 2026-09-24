@@ -1,0 +1,32 @@
+{
+  "status": "FROZEN_BEFORE_SELECTION",
+  "frozen_utc": "2026-09-22T08:13:25.375149+00:00",
+  "protocol_sha256": "53a6cc838a8d68a139c00f19ddc65c9ea9511ac740efd7214389c22c2d112a6a",
+  "source_hashes": {
+    "experiments/matched_backlog_v1/PROTOCOL.json": "53a6cc838a8d68a139c00f19ddc65c9ea9511ac740efd7214389c22c2d112a6a",
+    "experiments/matched_backlog_v1/common_bridge.py": "67bbfeeaf8827f43ccbd692b52164bb96c7982314ece58e16b195cae413acfef",
+    "experiments/matched_backlog_v1/run_protocol.py": "4b0f0808c264cf6b2211e11a41c6b788c883a015fa724b76c691b447908ae9de",
+    "experiments/matched_backlog_v1/qapg_revised.py": "fabc01182fe8debae12ad46327f1811f7e6bc25334bec02d9f1d531f0894c420",
+    "experiments/matched_backlog_v1/qapg_revised.cpp": "a299cf3daf46b7a4920b48a1466e20ba05371e76a0ebbdacabeb1ac55c40c9df",
+    "experiments/reference/edgesport_sim.py": "5b586c8dedadb068bdd075f603bb7a41f222a7c76a55bdf023afb382b45ffc03",
+    "experiments/matched_recorder.py": "f751ac979e75f175620f1a35964a61bfc5d3d194875d92dd010a25519da6afb1",
+    "experiments/run_matched.py": "b281194c54943a3b626a7208fc2461bc3ddfe9724ecd23ae5b646fbdca437754",
+    "experiments/literature_baselines/common_simulator_v2.py": "689d19ff78e12d4f179392ecd69ce56fa0a5cdabfbbf774785525c051a742e32",
+    "experiments/literature_baselines/eedo.py": "89348027bd65ca88454ae03f15ca4e5fce339a53c6f6dda24418a69f678e2eab",
+    "experiments/literature_baselines/gupa_orthogonal.py": "3320b0fcf586fc474b72433ade180094e82507ddf9175e7692d5b2885efeafeb"
+  },
+  "validation_reports_sha256": {
+    "experiments/matched_backlog_v1/QAPG_R_API_VALIDATION.json": "441ee08ef235d1e570933e318ccecde3f9c95891cf5d65992a0afad1ef2c6577",
+    "experiments/matched_backlog_v1/QAPG_REVISED_MATH_VALIDATION.json": "01a0d7583833b9e3ab41bc6a61b7561c85edbfd011d31c07c1e1e394e986ac24",
+    "experiments/results/matched_backlog_v1/development/INDEPENDENT_VALIDATION.json": "29cf4b95c1e0c3ae160964f47b77e37defbc9d4026b179eef8d66db3475220ab"
+  },
+  "development_metadata_sha256": "00cb9b8af390e14c5b592b6a282474fcb1f5835c9a8e24bac675234414df2b06",
+  "design_note": "Controller derivation and M/N edge normalization fixed before development trajectories. No controller changes after development or after selection/test. All previous development branches remain separate.",
+  "native_compiler_flags": [
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC"
+  ],
+  "analysis_rule": "Select by all-selection-seed backlog feasibility then minimum mean energy; lock settings before test. Keep all targets and test failures."
+}

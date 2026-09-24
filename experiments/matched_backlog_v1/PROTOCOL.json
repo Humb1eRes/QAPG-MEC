@@ -1,0 +1,89 @@
+{
+  "version": "matched-backlog-v1",
+  "purpose": "Energy comparison subject to the same finite-window mean aggregate backlog target",
+  "frozen_before_selection": true,
+  "methods": [
+    "QAPG-R",
+    "QAPG-capped",
+    "NoQuad-capped",
+    "GUPA-O-capped",
+    "EEDO-adapted",
+    "BP-Greedy-capped"
+  ],
+  "betas": [
+    1,
+    2,
+    3
+  ],
+  "energy_scales": [
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "base_V": 300000000000.0,
+  "base_adaptive_v_min": 80000000000.0,
+  "scale_adaptive_floor_for": [
+    "QAPG-capped",
+    "NoQuad-capped"
+  ],
+  "rho_targets": [
+    1.5,
+    2,
+    3,
+    5
+  ],
+  "backlog_target_mbit": "rho * N * beta * arrival_lambda * task_packet_bits / 1e6",
+  "target_interpretation": "Dimensionless workload-normalized aggregate backlog targets, not measured task deadlines or user QoE",
+  "development": {
+    "seeds": [
+      220927
+    ],
+    "T": 600,
+    "warmup": 200,
+    "energy_scales": [
+      1
+    ]
+  },
+  "selection": {
+    "seeds": [
+      320927,
+      320928
+    ],
+    "T": 1500,
+    "warmup": 300
+  },
+  "test": {
+    "seeds": [
+      420927,
+      420928,
+      420929,
+      420930,
+      420931
+    ],
+    "T": 3000,
+    "warmup": 300
+  },
+  "selection_rule": "For each method/load/target, select the scale with minimum mean energy among settings whose mean backlog in EACH selection seed is <= target. Break exact energy ties by lower mean backlog, then scale order. No interpolation or per-test-seed choice.",
+  "test_rule": "Test each distinct selected method/load/scale on all five test seeds. A target passes only if EACH test seed mean backlog <= target. No parameter replacement after test failure. Compare energy at a target only between methods that both pass.",
+  "infeasible_rule": "If no selection setting passes, report no feasible point in the common grid; do not claim inherent algorithm infeasibility.",
+  "completion_and_slope": "Report completion-to-arrival ratio, initial/final backlog, and latter-half OLS backlog slope. These are diagnostics, not undisclosed extra selection filters or stability guarantees.",
+  "common_physics": "Unchanged SimConfig hardware, orthogonal links, arrivals, slot ordering and full-slot energy; every method receives the same input arrays per load/seed.",
+  "common_cpu_rule": "Cap local and edge CPU frequency to the frequency needed for the original chosen useful service, before evaluating the same full-slot cubic energy. All six methods use this rule.",
+  "new_method": "QAPG-R minimizes conditional expected next weighted quadratic device/server queues plus fixed V energy, by joint local/upload/server block updates and edge-service updates. Edge queue weight is M/N, fixed from pool size before any trajectory runs. Arrival mean is read from common configuration; no future arrival samples are observed. Maximum 12 sweeps, objective-scaled tolerance 1e-10. No global or stochastic optimality claim.",
+  "comparator_parameters": "QAPG and NoQuad keep their adaptive weight shape with V and its floor scaled together; all other original constants retained. GUPA QoE/max-power association unchanged, CPU V tunable. EEDO fixed power and per-origin service mechanism retained. BP queue/power rule retained. No per-load algorithm parameter tuning beyond the common energy scale grid.",
+  "budget": {
+    "settings_per_method_and_load": 9,
+    "selection_runs": 324,
+    "maximum_test_runs_before_deduplication": 360
+  },
+  "results_policy": "Retain all grid points, targets, failures and controls. Selection frontier is labelled selection data; holdout results comprise only frozen selected operating points. Algorithm/source hashes freeze before selection; any later implementation correction invalidates affected results and is versioned.",
+  "runtime": "Decision runtime is diagnostic only; no cross-method speed superiority claim.",
+  "statistics": "Independent units are random seeds. Report means and sample SD across seeds; no slots-as-independent-replicates p-values, no adaptive stopping and no confidence guarantee from five seeds.",
+  "queue_weight_rationale": "Device queues are per-origin while each server aggregates a nominal N/M origins. The fixed M/N normalization equals the sum of equal per-origin squared queues for a balanced pool, but is only a chosen proxy when origins are unbalanced; it is not tuned from results."
+}
