@@ -1,0 +1,394 @@
+[
+  {
+    "config_id": "c00",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 1
+      },
+      {
+        "axis": "beta",
+        "value": 2
+      },
+      {
+        "axis": "M",
+        "value": 10
+      },
+      {
+        "axis": "bandwidth_mhz",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "config_id": "c01",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 18750000000.0,
+      "V_scale": 0.0625,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 0.0625
+      }
+    ]
+  },
+  {
+    "config_id": "c02",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 37500000000.0,
+      "V_scale": 0.125,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 0.125
+      }
+    ]
+  },
+  {
+    "config_id": "c03",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 75000000000.0,
+      "V_scale": 0.25,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "config_id": "c04",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 150000000000.0,
+      "V_scale": 0.5,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 0.5
+      }
+    ]
+  },
+  {
+    "config_id": "c05",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 600000000000.0,
+      "V_scale": 2,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "config_id": "c06",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 1200000000000.0,
+      "V_scale": 4,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "config_id": "c07",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 2400000000000.0,
+      "V_scale": 8,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "config_id": "c08",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 4800000000000.0,
+      "V_scale": 16,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "V_scale",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "config_id": "c09",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 1,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "beta",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "config_id": "c10",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 1.5,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "beta",
+        "value": 1.5
+      }
+    ]
+  },
+  {
+    "config_id": "c11",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2.5,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "beta",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "config_id": "c12",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 3,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "beta",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "config_id": "c13",
+    "parameters": {
+      "N": 100,
+      "M": 5,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "M",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "config_id": "c14",
+    "parameters": {
+      "N": 100,
+      "M": 15,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "M",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "config_id": "c15",
+    "parameters": {
+      "N": 100,
+      "M": 20,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 2000000.0,
+      "bandwidth_mhz": 2,
+      "noise_w": 1e-10
+    },
+    "memberships": [
+      {
+        "axis": "M",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "config_id": "c16",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 1000000.0,
+      "bandwidth_mhz": 1,
+      "noise_w": 5e-11
+    },
+    "memberships": [
+      {
+        "axis": "bandwidth_mhz",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "config_id": "c17",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 1500000.0,
+      "bandwidth_mhz": 1.5,
+      "noise_w": 7.5e-11
+    },
+    "memberships": [
+      {
+        "axis": "bandwidth_mhz",
+        "value": 1.5
+      }
+    ]
+  },
+  {
+    "config_id": "c18",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 3000000.0,
+      "bandwidth_mhz": 3,
+      "noise_w": 1.5e-10
+    },
+    "memberships": [
+      {
+        "axis": "bandwidth_mhz",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "config_id": "c19",
+    "parameters": {
+      "N": 100,
+      "M": 10,
+      "beta": 2,
+      "V": 300000000000.0,
+      "V_scale": 1,
+      "bandwidth_hz": 4000000.0,
+      "bandwidth_mhz": 4,
+      "noise_w": 2e-10
+    },
+    "memberships": [
+      {
+        "axis": "bandwidth_mhz",
+        "value": 4
+      }
+    ]
+  }
+]

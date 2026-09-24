@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_BEFORE_INPUTS_AND_RUNS",
+  "frozen_utc": "2026-09-22T13:23:45.799817+00:00",
+  "protocol_sha256": "a0ede8927ef4b128d3d970618099d10b1549b6e6fb84dc153fce07d39a995932",
+  "source_hashes": {
+    "experiments/matched_backlog_v1/PROTOCOL.json": "53a6cc838a8d68a139c00f19ddc65c9ea9511ac740efd7214389c22c2d112a6a",
+    "experiments/matched_backlog_v1/common_bridge.py": "67bbfeeaf8827f43ccbd692b52164bb96c7982314ece58e16b195cae413acfef",
+    "experiments/matched_backlog_v1/run_protocol.py": "4b0f0808c264cf6b2211e11a41c6b788c883a015fa724b76c691b447908ae9de",
+    "experiments/matched_backlog_v1/qapg_revised.py": "fabc01182fe8debae12ad46327f1811f7e6bc25334bec02d9f1d531f0894c420",
+    "experiments/matched_backlog_v1/qapg_revised.cpp": "a299cf3daf46b7a4920b48a1466e20ba05371e76a0ebbdacabeb1ac55c40c9df",
+    "experiments/reference/edgesport_sim.py": "5b586c8dedadb068bdd075f603bb7a41f222a7c76a55bdf023afb382b45ffc03",
+    "experiments/matched_recorder.py": "f751ac979e75f175620f1a35964a61bfc5d3d194875d92dd010a25519da6afb1",
+    "experiments/run_matched.py": "b281194c54943a3b626a7208fc2461bc3ddfe9724ecd23ae5b646fbdca437754",
+    "experiments/literature_baselines/common_simulator_v2.py": "689d19ff78e12d4f179392ecd69ce56fa0a5cdabfbbf774785525c051a742e32",
+    "experiments/literature_baselines/eedo.py": "89348027bd65ca88454ae03f15ca4e5fce339a53c6f6dda24418a69f678e2eab",
+    "experiments/literature_baselines/gupa_orthogonal.py": "3320b0fcf586fc474b72433ade180094e82507ddf9175e7692d5b2885efeafeb",
+    "experiments/parameter_sensitivity_v1/PROTOCOL.json": "a0ede8927ef4b128d3d970618099d10b1549b6e6fb84dc153fce07d39a995932",
+    "experiments/parameter_sensitivity_v1/configurations.json": "8438f57ffa999f929c1a13baf2e4937b985d82814d254c006597f2b002f60d92",
+    "experiments/parameter_sensitivity_v1/run_sensitivity.py": "48a863dac963c63f5dd81f6b96cb212eada3e4544d8cdf47bbb33038b39ec106",
+    "experiments/parameter_sensitivity_v1/validate_sensitivity.py": "7b50a649d62d0c71b5a2b4655a0234a66433d9a5b155eec64c18ed6559d79a27"
+  },
+  "original_freeze_sha256": "1fc42dea3e86b894ecaa99a2085a2c20ed2567ca0974b93154c191fa37607bb3",
+  "configuration_count": 20,
+  "planned_runs": 100
+}

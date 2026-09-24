@@ -1,0 +1,82 @@
+{
+  "version": "parameter-sensitivity-v1",
+  "purpose": "Independent QAPG one-factor sensitivity analysis; no backlog-budget operating-point selection",
+  "method_internal": "QAPG-R",
+  "method_public": "QAPG",
+  "seeds": [
+    520927,
+    520928,
+    520929,
+    520930,
+    520931
+  ],
+  "T": 3000,
+  "warmup": 300,
+  "reference": {
+    "N": 100,
+    "M": 10,
+    "beta": 2,
+    "V": 300000000000.0,
+    "V_scale": 1,
+    "bandwidth_hz": 2000000.0,
+    "bandwidth_mhz": 2,
+    "noise_w": 1e-10
+  },
+  "noise_psd_w_per_hz": 5e-17,
+  "grids": {
+    "V_scale": [
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "beta": [
+      1,
+      1.5,
+      2,
+      2.5,
+      3
+    ],
+    "M": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "bandwidth_mhz": [
+      1,
+      1.5,
+      2,
+      3,
+      4
+    ]
+  },
+  "distinct_configurations": 20,
+  "planned_runs": 100,
+  "maximum_workers": 4,
+  "deduplication": "The reference configuration belongs to all four grids and is executed once per seed. Each grid varies only its stated parameter from the reference; the bandwidth grid also scales noise power to retain fixed PSD.",
+  "input_sharing": "Original make_arrivals and generate_channels functions; arrivals shared for each beta/seed, channels shared for each M/seed. Thus V and bandwidth variants with common beta,M,seed receive identical input arrays. No new channel or arrival generator.",
+  "server_count_interpretation": "M changes the number of18GHz servers, their original geometric positions, the available destination set, and the controller-defined M/N queue weight together. This is a system-size sensitivity, not an isolated causal experiment on capacity alone.",
+  "bandwidth_interpretation": "noise_w=5e-17*bandwidth_hz. Fixed noise PSD rather than fixed total receiver noise; every active uplink receives the specified independently provisioned bandwidth.",
+  "other_configuration": "All remaining SimConfig fields retain their original defaults. QAPG uses its existing fixed V controller and the common useful-work CPU correction. No controller parameter is tuned or changed.",
+  "statistics": "All saved metrics use slots300 through2999 unless explicitly named full-run. Report arithmetic means and sample SD across five seed-level metrics. Do not treat slots as independent replicates. Local/edge processing shares are means of seed-level ratios. Runtime is diagnostic and machine-dependent.",
+  "failure_and_retention": "Keep every prespecified configuration, seed and failure; no filtering or replacement. A failed run remains a failed record. No changes to prior comparison data, controller sources, or selected operating points.",
+  "required_validation": [
+    "protocol/source freeze precedes all inputs and trajectories",
+    "exact20 configurations and100 run identities",
+    "shared input array hashes",
+    "unchanged original matched-backlog source hashes",
+    "common simulator physical resource assertions",
+    "saved trace checksums",
+    "energy components and total backlog sums",
+    "slot and cumulative flow conservation",
+    "CPU available-work caps",
+    "independently recomputed seed metrics",
+    "means and sample SD over five seeds"
+  ]
+}
