@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+*.dylib
+*.so
+experiments/**/native_build/
+experiments/results/**/inputs/
+experiments/results/**/traces/
+*.zip
