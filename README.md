@@ -17,7 +17,8 @@ server count, and uplink bandwidth.
 - [Figure data](figure-data)
 
 The source code and main numerical summaries can be browsed in this repository.
-The **v1.0.0 release** contains two complete experiment archives, including saved
+The [v1.0.0 release](https://github.com/Humb1eRes/QAPG-MEC/releases/tag/v1.0.0)
+contains two complete experiment archives, including saved
 inputs, every trajectory, per-run records, frozen sources, and validation reports.
 Download each archive and follow its own README in a separate working directory.
 The smaller repository-upload archive also contains extended numerical summaries
